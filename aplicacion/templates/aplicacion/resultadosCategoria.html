@@ -1,15 +1,14 @@
-{% extends 'aplicacion/base.html' %}
-{% load static %}
-
-    {% block titulo %}
-        Vinos
-    {% endblock titulo %}
-
-    {% block cabecera %}
-    Listado de Vinos
-    {% endblock cabecera %}
-        
-    {% block contenido %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Busqueda</title>
+</head>
+<body>
+    <h2>
+    Vinos de la categoria {{ categoria }}
+    </h2>
     <table class="table">
         <thead>
             <tr>
@@ -26,9 +25,5 @@
         {% endfor %}
         </tbody>
     </table>
-    {% endblock contenido %}
-
-
-
-
-
+</body>
+</html>

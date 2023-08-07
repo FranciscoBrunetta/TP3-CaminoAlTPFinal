@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Vino</title>
+</head>
+<body>
+    <h2>Ingresar nuevo vino</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Categoria :<input type="text" name="categoria" id="categoria"></p>
+        <p>Varietal :<input type="text" name="varietal" id="varietal"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

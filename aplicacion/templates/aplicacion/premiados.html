@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premiados</title>
-</head>
-<body bgcolor="gold">
-    <h1>Premiados</h1>
-</body>
-</html>
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+    {% block titulo %}
+        Premiados
+    {% endblock titulo %}
+
+    {% block cabecera %}
+    Listado de Vinos premiados
+    {% endblock cabecera %}
+        
+    {% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Pais</th>
+                <th>Fecha Premio</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for premiado in premiados %}
+        <tr>
+            <td>{{ premiado.pais }}</td>
+            <td>{{ premiado.fechapremio }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock contenido %}

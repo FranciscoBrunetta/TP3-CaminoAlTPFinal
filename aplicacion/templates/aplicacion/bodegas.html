@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bodegas</title>
-</head>
-<body bgcolor="lightblue">
-    <h1>Bodegas</h1>
-</body>
-</html>
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+    {% block titulo %}
+        Bodegas
+    {% endblock titulo %}
+
+    {% block cabecera %}
+    Listado de Bodegas
+    {% endblock cabecera %}
+        
+    {% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bodega in bodegas %}
+        <tr>
+            <td>{{ bodega.nombre }}</td>
+            <td>{{ bodega.ciudad }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endblock contenido %}
